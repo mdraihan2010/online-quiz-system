@@ -18,6 +18,7 @@ const attemptRoutes = require("./routes/attemptRoutes");
 const leaderboardRoutes = require("./routes/leaderboardRoutes");
 const adminAnalyticsRoutes = require("./routes/adminAnalyticsRoutes");
 const adminUserRoutes = require("./routes/adminUserRoutes");
+const adminResultsRoutes = require("./routes/adminResultsRoutes");
 
 // ========================================
 // MIDDLEWARE IMPORTS
@@ -82,6 +83,7 @@ const routes = [
   { path: "/api/v1/leaderboard", handler: leaderboardRoutes },
   { path: "/api/v1/admin/analytics", handler: adminAnalyticsRoutes },
   { path: "/api/v1/admin/users", handler: adminUserRoutes },
+  { path: "/api/v1/admin/results", handler: adminResultsRoutes },
 ];
 
 for (const route of routes) {
