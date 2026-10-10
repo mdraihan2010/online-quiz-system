@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -36,6 +37,11 @@ const {
 const app = express();
 
 app.disable("x-powered-by");
+
+// Render proxy configuration.
+// Trust exactly one proxy hop only if that matches
+// the actual trusted proxy topology of the deployment.
+app.set("trust proxy", 1);
 
 // ========================================
 // CORS CONFIGURATION
